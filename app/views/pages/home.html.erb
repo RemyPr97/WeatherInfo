@@ -1,4 +1,22 @@
-<h1 class="w-100" id="title">WeatherInfos</h1>
+<h1 id="title">WeatherInfos</h1>
+
+<div class="row">
+
+<% @meteo_test.each do |city|  %>
+<div class="card col-4">
+  <h3><%= city[0] %></h3>
+  <p><%= city[1][:temp] %></p>
+  <% case city[1][:weather] %>
+  <% when 'cloudy' %>
+    <i class="fa-solid fa-cloud"></i>
+  <% when 'sunny' %>
+    <i class="fa-solid fa-sun"></i>
+
+  <% end %>
+
+</div>
+<% end %>
+</div>
+
 
 <%= render "shared/footer" %>
-
