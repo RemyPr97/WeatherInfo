@@ -4,15 +4,26 @@
 
 <% @meteo_test.each do |city|  %>
 <div class="card col-4">
-  <h3><%= city[0] %></h3>
-  <p><%= city[1][:temp] %></p>
-  <% case city[1][:weather] %>
-  <% when 'cloudy' %>
-    <i class="fa-solid fa-cloud"></i>
-  <% when 'sunny' %>
-    <i class="fa-solid fa-sun"></i>
+  <div class="d-inline-flex w-100 justify-content-between">
+    <div>
+    <h3><%= city[0].capitalize %></h3>
+    <p><%= city[1][:temp] %></p>
 
-  <% end %>
+    </div>
+
+    <div class='m-3'>
+    <% case city[1][:weather] %>
+    <% when 'cloudy' %>
+      <i class="fa-solid fa-cloud"></i>
+    <% when 'sunny' %>
+      <i class="fa-solid fa-sun"></i>
+
+    <% end %>
+
+    </div>
+
+
+  </div>
 
 </div>
 <% end %>

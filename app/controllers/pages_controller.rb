@@ -10,7 +10,6 @@ class PagesController < ApplicationController
         weather: 'sunny'
       }
     }
-
   end
 
   def about
