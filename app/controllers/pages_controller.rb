@@ -10,6 +10,7 @@ class PagesController < ApplicationController
         weather: 'sunny'
       }
     }
+    @weather_key = ENV['WEATHERKEY']
   end
 
   def about
