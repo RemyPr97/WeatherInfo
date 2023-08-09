@@ -16,9 +16,10 @@
 
 .card-body {
   display: flex;
-  flex-direction: column; /* oriente les éléments enfants en colonne */
-  justify-content: center; /* centre les éléments sur l'axe vertical */
-  align-items: center; /* centre les éléments sur l'axe horizontal */
-  height: 100%; /* prend toute la hauteur disponible de la card */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
   font-size: 1.2rem;
 }
+

@@ -1,0 +1,31 @@
+.h1-about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
+  margin-right: -2%;
+}
+
+.about-section {
+  display: flex;
+  align-items: center;
+  border: solid;
+  border-radius: 9%;
+  width: 30%;
+  padding: 3%;
+  margin-left: 36%;
+  margin-top: 12%;
+  background-color: beige;
+}
+
+
+.text-about {
+  font-size: 23px;
+  font-family: 'REM', sans-serif;
+}
+
+
+.h1-about {
+  font-family: 'REM', sans-serif;
+  font-weight: bold;
+}
