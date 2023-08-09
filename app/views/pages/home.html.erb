@@ -1,32 +1,23 @@
 <h1 id="title">WeatherInfos</h1>
-
-<div class="row">
-
-<% @meteo_test.each do |city|  %>
-<div class="card col-4">
-  <div class="d-inline-flex w-100 justify-content-between">
-    <div>
-    <h3><%= city[0].capitalize %></h3>
-    <p><%= city[1][:temp] %></p>
-
+  <div class="row" data-controller="weather-test" data-weather-test-weather-key-value="<%= @weather_key %>">
+  <% @meteo_test.each do |city|  %>
+  <div class="card col-4" data-weather-test-target="weather">
+    <div class="d-inline-flex w-100 justify-content-between">
+      <div>
+        <h3><%= city[0].capitalize %></h3>
+        <p><%= city[1][:temp] %></p>
+      </div>
+      <div class='m-3'>
+        <% case city[1][:weather] %>
+        <% when 'cloudy' %>
+          <i class="fa-solid fa-cloud"></i>
+        <% when 'sunny' %>
+          <i class="fa-solid fa-sun"></i>
+      <% end %>
+      </div>
     </div>
-
-    <div class='m-3'>
-    <% case city[1][:weather] %>
-    <% when 'cloudy' %>
-      <i class="fa-solid fa-cloud"></i>
-    <% when 'sunny' %>
-      <i class="fa-solid fa-sun"></i>
-
-    <% end %>
-
-    </div>
-
-
   </div>
-
-</div>
-<% end %>
+  <% end %>
 </div>
 
 
