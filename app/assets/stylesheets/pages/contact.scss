@@ -1,0 +1,24 @@
+.contact-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  transform: translateY(-70px);
+}
+
+.contact-page .card {
+  margin: 10px;
+  width: 25rem;
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column; /* oriente les éléments enfants en colonne */
+  justify-content: center; /* centre les éléments sur l'axe vertical */
+  align-items: center; /* centre les éléments sur l'axe horizontal */
+  height: 100%; /* prend toute la hauteur disponible de la card */
+  font-size: 1.2rem;
+}

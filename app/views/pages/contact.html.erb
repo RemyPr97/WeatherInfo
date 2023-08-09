@@ -1,27 +1,43 @@
-<h1>Page Contact</h1>
-
-<div class="contact-info">
-
-
-  <div class="person-description">
-    <h2>Rémy Prince</h2>
-    <p>
-      GitHub : <%= link_to "Profil GitHub de Rémy", "https://github.com/remy_prince" %> <br>
-      Description : Passionné par le développement et toujours prêt à relever de nouveaux défis. <br>
-      Âge : 26 ans <br>
-      Localisation : Paris, France
-    </p>
+<div class="contact-page">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Rémy Prince</h5>
+      <p class= "card-text">
+        Âge : 26 ans <br>
+        Localisation : Paris, France
+      </p>
+      <%= link_to "Profil GitHub de Rémy", "https://github.com/RemyPr97" %>
+    </div>
   </div>
 
 
-  <div class="person-description">
-    <h2>Eno Leroy</h2>
-    <p>
-      GitHub : <%= link_to "Profil GitHub d'Eno", "https://github.com/eno_leroy" %> <br>
-      Description : Développeur expérimenté avec un amour pour l'innovation et la créativité. <br>
-      Âge : 27 ans <br>
-      Localisation : Paris, France
-    </p>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Eno Leroy</h5>
+      <p class= "card-text">
+        Âge : 27 ans <br>
+        Localisation : Paris, France
+      </p>
+      <%= link_to "Profil GitHub d'Eno", "https://github.com/EnoLEROY" %>
+    </div>
   </div>
 
+
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Evans Hulot</h5>
+      <p class= "card-text">
+        Âge : 25 ans <br>
+        Localisation : Rennes, France
+      </p>
+      <%= link_to "Profil GitHub d'Evans", "https://github.com/EvansHulot" %>
+    </div>
+  </div>
 </div>
+
+<style>
+  body {
+  background: rgb(0,212,255);
+  background: linear-gradient(90deg, rgba(0,212,255,1) 15%, rgba(78,201,192,1) 64%, rgba(109,103,212,1) 100%);
+  }
+</style>
