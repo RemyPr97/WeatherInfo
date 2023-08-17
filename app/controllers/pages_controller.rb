@@ -10,7 +10,7 @@ class PagesController < ApplicationController
         weather: 'sunny'
       }
     }
-    @weather_key = ENV['WEATHERKEY']
+    @weather_key = ENV['VISUALCROSSING_TOKEN']
   end
 
   def about
