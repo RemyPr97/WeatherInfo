@@ -20,9 +20,22 @@
   <% end %>
 </div>
 
+<h2>Localisation</h2>
+<p>Latitude: <%= @location[:latitude] %></p>
+<p>Longitude: <%= @location[:longitude] %></p>
+<p>Adresse: <%= @location[:address] %></p>
+
+<h2>Température d'aujourd'hui</h2>
+<p><%= @today_temp %>°C</p>
+
+<h2>Prévisions pour les jours suivants</h2>
+<% @forecast.each do |day| %>
+  <p>Date: <%= day[:date] %>, Température: <%= day[:temp] %>°C</p>
+<% end %>
 
 
-<%= @json %>
+
+<%# <%= @json %> 
 
 
 <%= render "shared/footer" %>
