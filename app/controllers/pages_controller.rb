@@ -16,13 +16,13 @@ class PagesController < ApplicationController
     @weather_key = ENV['VISUALCROSSING_TOKEN']
 
     # # decoupage de l'api
-    # @city = 'paris'
+    @city = 'paris'
 
     @url = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/#{@city}?unitGroup=metric&key=#{@weather_key}&contentType=json"
 
-    # @uri = URI.open(@url).read
+    @uri = URI.open(@url).read
 
-    # @json = JSON.parse(@uri)
+    @json = JSON.parse(@uri)
 
     @location = {
       latitude: @json['latitude'],
@@ -30,7 +30,7 @@ class PagesController < ApplicationController
       address: @json['resolvedAddress']
     }
 
-    @today_temp = @json['days'].first['temp']
+    @actual_temp = @json['currentConditions']
 
     @forecast = @json['days'].map do |day|
       {

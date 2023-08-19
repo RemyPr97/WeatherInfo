@@ -25,8 +25,8 @@
 <p>Longitude: <%= @location[:longitude] %></p>
 <p>Adresse: <%= @location[:address] %></p>
 
-<h2>Température d'aujourd'hui</h2>
-<p><%= @today_temp %>°C</p>
+<h2>Température actuelle</h2>
+<p><%= @actual_temp["temp"] %>°C</p>
 
 <h2>Prévisions pour les jours suivants</h2>
 <% @forecast.each do |day| %>
@@ -35,7 +35,7 @@
 
 
 
-<%# <%= @json %> 
+<%# <%= @json %>
 
 
 <%= render "shared/footer" %>
