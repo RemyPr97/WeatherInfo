@@ -30,7 +30,10 @@ class PagesController < ApplicationController
       address: @json['resolvedAddress']
     }
 
-    @actual_temp = @json['currentConditions']
+    @currentConditions = @json['currentConditions']['temp']
+
+
+    @today_temp = @json['days'].first['temp']
 
     @forecast = @json['days'].map do |day|
       {
