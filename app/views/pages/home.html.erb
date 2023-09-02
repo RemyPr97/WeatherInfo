@@ -1,39 +1,35 @@
-<h1 id="title">WeatherInfos</h1>
-  <div class="row" data-controller="weather-test" data-weather-test-weather-key-value="<%= @weather_key %>">
-  <% @meteo_test.each do |city|  %>
-  <div class="card col-4" data-weather-test-target="weather">
-    <div class="d-inline-flex w-100 justify-content-between">
-      <div>
-        <h3><%= city[0].capitalize %></h3>
-        <p><%= city[1][:temp] %></p>
-      </div>
-      <div class='m-3'>
-        <% case city[1][:weather] %>
-        <% when 'cloudy' %>
-          <i class="fa-solid fa-cloud"></i>
-        <% when 'sunny' %>
-          <i class="fa-solid fa-sun"></i>
+<body>
+  <h1 id="title">WeatherInfos</h1>
+  <div class="display-cards-flex">
+    <div class="display-cards-grid" data-controller="weather-api" data-weather-api-weather-key-value="<%= @weather_key %>">
+      <% @cities.each do |city| %>
+        <div class="home-cards">
+          <div>
+            <%= city["address"] %> |
+            <%= city["currentConditions"]["conditions"] %>
+          </div>
+          <div class="display-icon-flex">
+            <div class="width-border" data-controller="change-icon" data-change-icon-icons-value="<%= city["currentConditions"]["icon"] %>">
+              <div id="icon" data-change-icon-target="changeIcons"></div>
+            </div>
+            <div id="flex-right">
+              <div id="temp-ress">
+                <p id="temp"><%= city["currentConditions"]["temp"].round(0) %>°</p>
+                <div class="display-feelslike-flex">
+                  <p id="feelslike">feelslike</p>
+                  <p id="feelslike-temp"><%= city["currentConditions"]["feelslike"].round(0) %>°</p>
+                </div>
+              </div>
+              <p id="wind"><%= city["currentConditions"]["windspeed"].round(0) %> km/h</p>
+              <div id="flex-values">
+                <p id="uv">UV <%= city["currentConditions"]["uvindex"].round(0) %></p>
+                <p id="humidity"><%= city["currentConditions"]["humidity"].round(0) %>%</p>
+              </div>
+            </div>
+          </div>
+        </div>
       <% end %>
-      </div>
     </div>
   </div>
-  <% end %>
-</div>
-
-<h2>Localisation</h2>
-<p>Ville : <%= @location[:address] %></p>
-
-<h2>Température d'aujourd'hui</h2>
-<p><%= @currentConditions %>°C</p>
-
-<h2>Prévisions pour les jours suivants</h2>
-<% @forecast.each do |day| %>
-  <p>Date: <%= day[:date] %>, Température: <%= day[:temp] %>°C</p>
-<% end %>
-
-
-
-<%= @json %>
-
-
-<%= render "shared/footer" %>
+  <%= render "shared/footer" %>
+</body>
