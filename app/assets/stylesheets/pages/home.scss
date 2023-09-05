@@ -30,6 +30,7 @@
   padding: 10px;
   width: 15rem;
   height: 8rem;
+  border-radius: 20px;
 }
 
 .display-cards-flex {
@@ -51,11 +52,11 @@
 
 #icon {
   width: 5em;
-  margin-left: 2vh;
+  margin-left: 15px;
 }
 
 .width-border {
-  width: 21vh;
+  width: 115px;
 }
 
 #flex-right {
@@ -67,7 +68,33 @@
   }
 
   #wind {
+    display: flex;
     font-size: 10px;
+    align-items: center;
+  }
+
+  #wind-value {
+    margin-left: 5px
+  }
+
+  .uv {
+    display: flex;
+    font-size: 10px;
+    align-items: center;
+  }
+
+  #uv-value {
+    margin-left: 5px;
+  }
+
+  #humidity {
+    display: flex;
+    font-size: 10px;
+    align-items: center;
+  }
+
+  #humidity-value {
+    margin-left: 5px;
   }
 }
 
@@ -87,7 +114,7 @@
 #flex-values {
   display: flex;
   justify-content: space-between;
-  width: 5vw;
+  width: 80px;
 
   p {
     font-size: 10px;

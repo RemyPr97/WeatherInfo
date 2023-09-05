@@ -20,10 +20,19 @@
                   <p id="feelslike-temp"><%= city["currentConditions"]["feelslike"].round(0) %>°</p>
                 </div>
               </div>
-              <p id="wind"><%= city["currentConditions"]["windspeed"].round(0) %> km/h</p>
+              <div id="wind">
+                <i class="fa-solid fa-wind"></i>
+                <p id="wind-value"><%= city["currentConditions"]["windspeed"].round(0) %> km/h</p>
+              </div>
               <div id="flex-values">
-                <p id="uv">UV <%= city["currentConditions"]["uvindex"].round(0) %></p>
-                <p id="humidity"><%= city["currentConditions"]["humidity"].round(0) %>%</p>
+                <div class="uv">
+                  <i class="fa-solid fa-sun" style="color: #223658; font-size: 10px"></i>
+                  <p id="uv-value">UV <%= city["currentConditions"]["uvindex"].round(0) %></p>
+                </div>
+                <div id="humidity">
+                  <i class="fa-solid fa-droplet"></i>
+                  <p id="humidity-value"><%= city["currentConditions"]["humidity"].round(0) %>%</p>
+                </div>
               </div>
             </div>
           </div>
